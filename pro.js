@@ -228,6 +228,9 @@
         output.appendChild(t);
       }
     };
+    console.clear=function(){
+      while (output.hasChildNodes()) output.removeChild(output.lastChild);
+    };
     console.error=function(){
       for (var i=0;i<arguments.length;i++) {
         var t=document.createElement("evaloutputentry"),u=arguments[i];
