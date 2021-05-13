@@ -187,7 +187,7 @@
         █░█ █▀▀ █░░ █▀█ █
         █▀█ ██▄ █▄▄ █▀▀ ▄
         `)
-        createOutputEntry('Info: This is a JavaScript console for school computers that block\n the inspect element\nCommands:\n  Close: projs.close()\n  Clear: projs.clear()\n  Set Editor Color: projs.setcolor("Hex/Color Name")\n  Reset Editor Color: projs.resetcolor()');
+        createOutputEntry('Info: This is a JavaScript console for school computers that block\n the inspect element\nCommands:\n  Close: projs.close()\n  Clear: projs.clear()\n  Set Editor Color: projs.setcolor("Hex/Color Name")\n  Reset Editor Color: projs.resetcolor()\n To get a list of color names, go to\n https://hello123991.github.io/projs/colors.html');
       },
       setcolor(ColorName) {
       let elem = document.querySelector("evalcontainer");
@@ -251,6 +251,16 @@
     };
     console.clear=function(){
       while (output.hasChildNodes()) output.removeChild(output.lastChild);
+        createOutputEntry(`
+      ██████╗░██████╗░░█████╗░░░░░░██╗░██████╗
+      ██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝
+      ██████╔╝██████╔╝██║░░██║░░░░░██║╚█████╗░
+      ██╔═══╝░██╔══██╗██║░░██║██╗░░██║░╚═══██╗
+      ██║░░░░░██║░░██║╚█████╔╝╚█████╔╝██████╔╝(Fork of Eval.js)
+      ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚═════╝░
+        `)
+        createOutputEntry('Type projs.help() for help')
+        createOutputEntry("Console Cleared")
     };
     console.error=function(){
       for (var i=0;i<arguments.length;i++) {
