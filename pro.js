@@ -169,6 +169,15 @@
       window:s,
       clear() {
         while (output.hasChildNodes()) output.removeChild(output.lastChild);
+        createOutputEntry(`
+      ██████╗░██████╗░░█████╗░░░░░░██╗░██████╗
+      ██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝
+      ██████╔╝██████╔╝██║░░██║░░░░░██║╚█████╗░
+      ██╔═══╝░██╔══██╗██║░░██║██╗░░██║░╚═══██╗
+      ██║░░░░░██║░░██║╚█████╔╝╚█████╔╝██████╔╝(Fork of Eval.js)
+      ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚═════╝░
+        `)
+        createOutputEntry('Type projs.help() for help')
       },
       close() {
         document.body.removeChild(this.window);
