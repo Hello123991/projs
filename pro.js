@@ -13,7 +13,7 @@
     position: fixed;
     width: 500px;
     height: 350px;
-    background: rgba(255,0,255);
+    background: #ff00ff;
     top: 0;
     left: 0;
     right: 0;
@@ -178,8 +178,20 @@
         █░█ █▀▀ █░░ █▀█ █
         █▀█ ██▄ █▄▄ █▀▀ ▄
         `)
-        createOutputEntry('Info: This is a JavaScript console for school computers that block\n the inspect element\nCommands:\n  Close: projs.close()\n  Clear: projs.clear()');
+        createOutputEntry('Info: This is a JavaScript console for school computers that block\n the inspect element\nCommands:\n  Close: projs.close()\n  Clear: projs.clear()\n  Set Editor Color: projs.setcolor("Hex/Color Name")\n  Reset Editor Color: projs.resetcolor()');
+      },
+      setcolor(ColorName) {
+      let elem = document.querySelector("evalcontainer");
+      elem.style.backgroundColor = ColorName;
+        createOutputEntry("Successfully Set Editor Color to "+ColorName)
+        createOutputEntry('To Reset, Type projs.resetcolor()');
+      },
+      resetcolor() {
+      let elem3 = document.querySelector("evalcontainer");
+      elem3.style.backgroundColor = "#ff00ff";
+        createOutputEntry("Successfully Reset Editor Color")
       }
+
     };
     function merp(u,t) {
       switch (typeof u) {
